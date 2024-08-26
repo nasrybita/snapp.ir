@@ -289,6 +289,30 @@ i {
 
 
 
+/* ------------------------------------------------------ */
+/* Marketplace Section */
+.marketplace{
+    display: none;
+}
+
+
+@media only screen and (min-width: 840px){
+    .marketplace{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 10%));
+        justify-content: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+        padding: 4rem;
+        
+    }
+
+    .app img{
+        width: 100%;
+        height: 100%;
+    }
+
+}
 
 
 
