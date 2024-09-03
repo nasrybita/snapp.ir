@@ -466,3 +466,273 @@ i {
         text-align: right;
     }
 }
+
+
+/* ------------------------------------------------------ */
+/* Image Carousel Section */
+
+#slider-wrapper {
+    width: 940px;
+    height: 267px;
+    margin: 50px auto;
+    position: relative;
+    margin-bottom: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #s1 {
+    padding: 6px;
+    background: #000000;
+    position: absolute;
+    left: 50%;
+    /* bottom: 25px; */
+    top: 235px;
+    margin-left: -36px;
+    border-radius: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  #s2 {
+    padding: 6px;
+    background: #000000;
+    position: absolute;
+    left: 50%;
+    /* bottom: 25px; */
+    top: 235px;
+    margin-left: -12px;
+    border-radius: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  #s3 {
+    padding: 6px;
+    background: #000000;
+    position: absolute;
+    left: 50%;
+    /* bottom: 25px; */
+    top: 235px;
+    margin-left: 12px;
+    border-radius: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  #s4 {
+    padding: 6px;
+    background: #000000;
+    position: absolute;
+    left: 50%;
+    /* bottom: 25px; */
+    top: 235px;
+    margin-left: 36px;
+    border-radius: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  #s1:hover,
+  #s2:hover,
+  #s3:hover,
+  #s4:hover {
+    opacity: .50;
+  }
+  
+  .inner-wrapper {
+    width: 940px;
+    /* height: 470px; */
+    height: 267px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+  
+  .control {
+    display: none;
+  }
+  
+  #Slide1:checked ~ .overflow-wrapper {
+    margin-left: 0%;
+  }
+  
+  #Slide2:checked ~ .overflow-wrapper {
+    margin-left: -100%;
+  }
+  
+  #Slide3:checked ~ .overflow-wrapper {
+    margin-left: -200%;
+  }
+  
+  #Slide4:checked ~ .overflow-wrapper {
+    margin-left: -300%;
+  }
+  
+  #Slide1:checked + #s1 {
+    opacity: 1;
+  }
+  
+  #Slide2:checked + #s2 {
+    opacity: 1;
+  }
+  
+  #Slide3:checked + #s3 {
+    opacity: 1;
+  }
+  
+  #Slide4:checked + #s4 {
+    opacity: 1;
+  }
+  
+  .overflow-wrapper {
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .slide img {
+    width: 25%;
+    float: left;
+  }
+
+/* ---------------------------------------------- */
+/* Carousel Section */
+
+  
+.container{
+position: relative;
+width: 100vw;
+height: 250px;
+margin-bottom: 5rem;
+/* background-color: red;  */
+}
+
+.container .wrapper{
+width: 90%;
+height: 100%;
+margin: 5rem auto;
+overflow: hidden;
+border-radius: 7px;
+}
+
+.container .slider-holder{
+display: grid;
+grid-template-columns: repeat(4, 100%);
+animation: slide 15s ease infinite;
+height: 100%;
+
+}
+
+.container #slider-image1{
+/* background-color: lawngreen; */
+background: url('../media/images/Food.jpg');
+background-size: cover;
+}
+
+.container #slider-image2{
+/* background-color: yellow; */
+background: url('../media/images/Market.jpg');
+background-size: cover;
+}
+
+.container #slider-image3{
+/* background-color: tomato; */
+background: url('../media/images/Driver.jpg');
+background-size: cover;
+}
+
+.container #slider-image4{
+/* background-color: darkorchid; */
+background: url('../media/images/Club.jpg');
+background-size: cover;
+}
+
+.container .button-holder{
+position: absolute;
+bottom: 0%;
+left: 45%;
+}
+
+
+.container .button-holder .dots{
+display: inline-block;
+height: 15px;
+width: 15px;
+border-radius: 3rem;
+background-color: rgba(0, 209, 112, 0.6);
+margin: .4rem .3rem;
+cursor: pointer;
+}
+
+
+@keyframes slide {
+0%{
+    transform: translateX(0%);
+}
+10%{
+    transform: translateX(-100%);
+}
+20%{
+    transform: translateX(-100%);
+}
+30%{
+    transform: translateX(-200%);
+}
+40%{
+    transform: translateX(-200%);
+}
+50%{
+    transform: translateX(-300%);
+}
+60%{
+    transform: translateX(-300%);
+}
+70%{
+    transform: translateX(0%);
+}
+80%{
+    transform: translateX(0%);
+}
+90%{
+    transform: translateX(0%);
+}
+100%{
+    transform: translateX(0%);
+}
+}
+
+@media screen and (min-width: 1530px) {
+.container{
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    /* background-color: red; */
+    
+}
+
+.container .wrapper{
+    width: 70%;
+    height: 100%;
+    margin: 5rem auto;
+    overflow: hidden;
+    border-radius: 7px;
+}
+}
+
+
