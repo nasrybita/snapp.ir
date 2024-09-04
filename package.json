@@ -1,0 +1,15 @@
+{
+  "homepage":"http://{github-nasrybita}.github.io/{snapp.ir}",
+  "name": "snap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
